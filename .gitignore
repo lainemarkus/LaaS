@@ -1,0 +1,17 @@
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Quarkus
+target/
+*.log
+
+# Sensitive files
+access.sh
+.env
+*.zip
+
+# VS Code
+.vscode/
