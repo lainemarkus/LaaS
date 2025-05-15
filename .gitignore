@@ -15,3 +15,7 @@ access.sh
 
 # VS Code
 .vscode/
+
+
+# Terraform files for EC2 and Quarkus setup
+**/EC2InstallQuarkus.tf
