@@ -23,6 +23,11 @@ cd Quarkus-Terraform/loyaltycard
 terraform destroy -auto-approve
 cd ../..
 
+# #Terraform - Quarkus discountcoupon
+cd Quarkus-Terraform/discountcoupon
+terraform destroy -auto-approve
+cd ../..
+
 # #Terraform - RDS
 cd RDS-Terraform
 terraform destroy -auto-approve
