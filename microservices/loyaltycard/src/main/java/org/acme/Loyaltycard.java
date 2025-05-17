@@ -9,7 +9,7 @@ import io.vertx.mutiny.sqlclient.Tuple;
 
 public class Loyaltycard {
 	
-	    public Long id;
+	    public LoyaltyCardID id;
 		public Long idCustomer;
 		public Long idShop;
 
@@ -18,7 +18,7 @@ public class Loyaltycard {
 
 	
 
-		public Loyaltycard(Long id, Long idCustomer, Long idShop) {
+		public Loyaltycard(LoyaltyCardID id, Long idCustomer, Long idShop) {
 			this.id = id;
 			this.idCustomer = idCustomer;
 			this.idShop = idShop;
@@ -32,7 +32,7 @@ public class Loyaltycard {
 		}
 
 		private static Loyaltycard from(Row row) {
-	        return new Loyaltycard(row.getLong("id"), row.getLong("idCustomer") , row.getLong("idShop"));
+	        return new Loyaltycard(new LoyaltyCardID(row.getLong("id")), row.getLong("idCustomer") , row.getLong("idShop"));
 	    }
 	    
 	    public static Multi<Loyaltycard> findAll(MySQLPool client) {
