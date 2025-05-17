@@ -4,6 +4,9 @@
 .terraform/
 .terraform.lock.hcl
 
+#Quarkus-Terraform
+**/EC2InstallQuarkus.tf
+
 # Quarkus
 target/
 *.log
