@@ -20,7 +20,7 @@ resource "aws_instance" "exampleDeployQuarkus" {
 #  instance_type           = "c6g.medium"
 # alternative instance_type for Amazon Linux x86 built by Amazon Web Services  
   instance_type           = "t2.micro"
-  vpc_security_group_ids  = [aws_security_group.instance.id]
+  vpc_security_group_ids  = ["sg-0e9d209903ab25963"]
   key_name                = "vockey"
 
   user_data = "${file("quarkus.sh")}"

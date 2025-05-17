@@ -39,7 +39,7 @@ resource "aws_db_instance" "example" {
   instance_class      = "db.t4g.micro"
   skip_final_snapshot = true
   publicly_accessible = true
-  vpc_security_group_ids  = [aws_security_group.rds.id]
+  vpc_security_group_ids  = ["sg-0e9d209903ab25963"]
   db_name             = var.db_name
   username = var.db_username
   password = var.db_password
