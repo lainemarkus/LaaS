@@ -6,6 +6,8 @@ sudo yum install -y docker
 sudo service docker start
 
 
-sudo docker login -u "lainemarkus" -p "K]jTp,6f4,4BMLM"
-sudo docker pull lainemarkus/discountcoupon:1.0.0-SNAPSHOT
-sudo docker run -d --name discountcoupon -p 8080:8080 lainemarkus/discountcoupon:1.0.0-SNAPSHOT
+# Login to Docker
+source ./access.sh
+sudo docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+sudo docker pull $DOCKER_USERNAME/discountcoupon:1.0.0-SNAPSHOT
+sudo docker run -d --name discountcoupon -p 8080:8080 $DOCKER_USERNAME/discountcoupon:1.0.0-SNAPSHOT
